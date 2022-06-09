@@ -2633,7 +2633,7 @@ html[subframe] body {
                 name = "No Name";
             }
 
-            await addDoc(scoresRef, { name, score, timestamp: serverTimestamp() })
+            await addDoc(scoresRef, { name: name.trim(), score, timestamp: serverTimestamp() })
         }
 
         const buildTr = (data) => {
