@@ -1,5 +1,7 @@
 FROM python:3.10-slim-bullseye
 
+LABEL org.opencontainers.image.source https://github.com/ShawnLabo/dinosaur
+
 ENV POETRY_NO_INTERACTION=1
 ENV PORT=8080
 
