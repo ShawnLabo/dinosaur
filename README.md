@@ -8,6 +8,12 @@ Install dependencies:
 poetry install
 ```
 
+Set Firebase config to `FIREBASE_CONFIG` environment variable as a JSON.
+
+```bash
+export FIREBASE_CONFIG='{"apiKey":"...","authDomain":"...", ...}'
+```
+
 Run development server:
 
 ```bash
