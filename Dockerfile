@@ -5,12 +5,11 @@ ENV PORT=8080
 
 WORKDIR /app
 
-RUN pip install poetry
-COPY poetry.toml /app
+RUN pip install poetry && poetry config virtualenvs.create false
 COPY poetry.lock /app
 COPY pyproject.toml /app
 RUN poetry install --no-dev
 
 COPY . /app
 
-CMD ["sh", "-c", "poetry run hypercorn main:app --bind 0.0.0.0:$PORT"]
+CMD ["sh", "-c", "hypercorn main:app --bind 0.0.0.0:$PORT"]
