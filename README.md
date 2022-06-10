@@ -1,5 +1,11 @@
 # dinosaur
 
+## Run with Docker
+
+```bash
+docker run -p 8080:8080 -e FIREBASE_CONFIG=null ghcr.io/shawnlabo/dinosaur
+```
+
 ## Development
 
 Install dependencies:
