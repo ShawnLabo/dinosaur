@@ -1562,7 +1562,6 @@
     */
     setHighScore: function(distance) {
         distance = this.getActualDistance(distance);
-        console.log(`kore? ${distance}`)
         addHighScore(distance);
         var highScoreStr = (this.defaultString +
         distance).substr(-this.config.MAX_DISTANCE_UNITS);
@@ -2659,8 +2658,6 @@ html[subframe] body {
         const q = query(scoresRef, orderBy("score", "desc"), limit(10));
         onSnapshot(q, (snapshot) => {
             if (!snapshot) { return; }
-
-            console.log(snapshot)
 
             const newRanking = document.createElement("tbody");
             newRanking.setAttribute("id", "ranking");
