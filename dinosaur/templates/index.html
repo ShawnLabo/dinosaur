@@ -2646,10 +2646,14 @@ html[subframe] body {
             score.appendChild(document.createTextNode(data["score"]));
             tr.appendChild(score);
 
-            const d = new Date(data["timestamp"].seconds * 1000)
-            const datetime = d.toLocaleString("ja-JP", { timeZone: "JST"});
             const ts = document.createElement("td");
-            ts.appendChild(document.createTextNode(datetime));
+
+            if (data["timestamp"]) {
+              const d = new Date(data["timestamp"].seconds * 1000)
+              const datetime = d.toLocaleString("ja-JP", { timeZone: "JST"});
+              ts.appendChild(document.createTextNode(datetime));
+            }
+
             tr.appendChild(ts);
 
             return tr;
