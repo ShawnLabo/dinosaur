@@ -7,9 +7,9 @@ license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-hypercorn = "^0.13.2"
 fastapi = "^0.78.0"
 Jinja2 = "^3.1.2"
+uvicorn = {extras = ["standard"], version = "^0.19.0"}
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
